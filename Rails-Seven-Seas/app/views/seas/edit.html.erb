@@ -24,5 +24,8 @@
   <%= f.check_box :has_mermaids %>
 
   <%=  f.submit %>
+    <%= form_for(@sea, :method => :delete, :remote => true) do |f| %>
+      <%= f.submit :value => "Destroy" %>
+    <% end %>
 
   <% end %>
