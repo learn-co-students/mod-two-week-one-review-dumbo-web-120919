@@ -1,0 +1,13 @@
+<h1>All de Seas</h1>
+<hr>
+
+<%= @seas.each do |sea| %>
+<h3><%= link_to(sea.name, sea_path(sea.id)) %></h3>
+<a href="/seas/<%=sea.id%>"><img class="card-img-top img-thumbnail" style="height: 15rem" src="<%= sea.image_url %>" alt="sea"></a>
+          <div class="card-block"><h3><%= sea.temperature%></h3>
+<h3><%= sea.bio%></h3>
+<h3><%= sea.mood%></h3>
+<h3><%= sea.favorite_color%></h3>
+<h3><%= sea.scariest_creature%></h3>
+<h3><%= sea.has_mermaids %></h3>
+<% end %>
